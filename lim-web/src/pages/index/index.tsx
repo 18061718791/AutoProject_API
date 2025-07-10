@@ -69,10 +69,10 @@ const Index: React.FC = () => {
                         </Tooltip>
                       </div>
                       <p style={{ fontSize: 36, marginBottom: 0, fontWeight: 'bold' }}>
-                        {data?.[item.countKey] ?? 0}
+                        {data[item.countKey]}
                       </p>
                       <span style={{ position: 'absolute', right: 16, fontSize: 12 }}>
-                        较昨日新增：{data?.[item.newCountKey] ?? 0}
+                        较昨日新增：{data[item.newCountKey]}
                       </span>
                     </>
                   )}
@@ -96,7 +96,7 @@ const Index: React.FC = () => {
               >
                 {loading ? (
                   <Skeleton paragraph={{ rows: 7 }} />
-                ) : (data?.api_data?.length ? (
+                ) : data.api_data.length ? (
                   <RingChart
                     data={data.api_data}
                     content="接口统计"
@@ -123,7 +123,7 @@ const Index: React.FC = () => {
               >
                 {loading ? (
                   <Skeleton paragraph={{ rows: 7 }} />
-                ) : (data?.case_data?.length ? (
+                ) : data.case_data.length ? (
                   <RingChart data={data.case_data} content="用例统计" />
                 ) : (
                   <EmptyComponents />
