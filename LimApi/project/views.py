@@ -207,4 +207,4 @@ def get_index_statistics(request):
         res_data['case_data'][case['creater_name']] += 1
     res_data['case_data'] = [
         {'name': c_name, 'count': res_data['case_data'][c_name]} for c_name in res_data['case_data'].keys()]
-    return Response(res_data)
+    return Response({'results': res_data})
