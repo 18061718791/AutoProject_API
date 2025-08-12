@@ -332,7 +332,7 @@ CREATE TABLE `auth_user`  (
 -- ----------------------------
 -- Records of auth_user
 -- ----------------------------
-INSERT INTO `auth_user` VALUES (1, 'pbkdf2_sha256$390000$wpdawNck2yquKHx0l5A7rJ$n7Tjl165CMhUqMB15+VpVKRs0J9INm9QPKP12ili0TY=', NULL, 1, 'admin', '理员', '管', '', 1, 1, '2023-02-28 00:00:00.000000', '曲鸟');
+INSERT INTO `auth_user` VALUES (1, 'pbkdf2_sha256$390000$wpdawNck2yquKHx0l5A7rJ$n7Tjl165CMhUqMB15+VpVKRs0J9INm9QPKP12ili0TY=', NULL, 1, 'admin', '理员', '管', '', 1, 1, '2023-02-28 00:00:00.000000', '系统管理员');
 INSERT INTO `auth_user` VALUES (2, 'pbkdf2_sha256$390000$dKvpPlT1hWLwTwo4h89xFN$PGW4wqz4UGy70tCeurxotzheCwAhJ4+tKMPJAvmzBMw=', NULL, 0, 'test', '', '', '', 0, 1, '2023-02-28 01:27:49.349741', '王牌测试');
 
 -- ----------------------------

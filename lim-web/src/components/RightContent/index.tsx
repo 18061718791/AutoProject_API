@@ -8,7 +8,7 @@ const GlobalHeaderRight: React.FC = () => {
   const [pwdOpen, setPwdOpen] = useState<boolean>(false); //控制弹窗显示还是隐藏
   const getUserInfo = () =>
     localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo') as any) : {};
-  const [username, setUsername] = useState(getUserInfo().name || '');
+  const [username, setUsername] = useState(getUserInfo().username || '');
   const menu = (
     <Menu>
       <Menu.Item key="1" onClick={() => message.warning('待实现！')}>
@@ -51,7 +51,7 @@ const GlobalHeaderRight: React.FC = () => {
       await login({ username: user, password: password }).then((res) => {
         localStorage.setItem('token', res.results.token);
         localStorage.setItem('userInfo', JSON.stringify(res.results.user_info));
-        setUsername(res.results.user_info.name);
+        setUsername(res.results.user_info.username);
         message.success('登录成功！');
         Modal.destroyAll();
       });

@@ -6,7 +6,6 @@
     "resolveJsonModule": true,
     "importHelpers": true,
     "jsx": "react-jsx",
-    "suppressImplicitAnyIndexErrors": true, //减少部分警告
     "esModuleInterop": true,
     "sourceMap": true,
     "baseUrl": "./",
