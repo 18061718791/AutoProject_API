@@ -1,4 +1,4 @@
-export const HOST_SERVER = 'http://localhost:8000';
+export const HOST_SERVER = 'http://localhost:8001';
 //export const HOST_SERVER = 'http://121.43.43.59:8006'; //接口服务地址
 export const VERSION = '1.3.0';//版本号
 export const GET = 'get'; //代表请求列表

@@ -7,7 +7,8 @@ export default defineConfig({
   // history: { type: 'hash' },
   favicon: '/icon.ico',
   nodeModulesTransform: {
-    type: 'none',
+    type: 'all',
+    exclude: [],
   },
 
   routes: [
@@ -88,8 +89,15 @@ export default defineConfig({
   ],
   fastRefresh: {},
   exportStatic: {}, //防止刷新页面出现404
+  // 添加babel配置以处理ES2020+语法
+  extraBabelPlugins: [
+    '@babel/plugin-proposal-optional-chaining',
+    '@babel/plugin-proposal-nullish-coalescing-operator'
+  ],
+
   chainWebpack(conf) {
     // ....other config
+    // 处理.mjs文件
     conf.module
       .rule('mjs$')
       .test(/\.mjs$/)

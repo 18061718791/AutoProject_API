@@ -54,7 +54,7 @@ const Index: React.FC = () => {
         <Col span={18}>
           <Row gutter={16}>
             {STATIC_MAP.map((item) => (
-              <Col span={8}>
+              <Col span={8} key={item.countKey}>
                 <Card style={{ backgroundColor: 'white', paddingBottom: 10 }}>
                   {loading ? (
                     <Skeleton paragraph={{ rows: 1 }} />
